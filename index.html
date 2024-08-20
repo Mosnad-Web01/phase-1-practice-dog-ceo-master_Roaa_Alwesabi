@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Intro to AJAX Practice Tasks</title>
+  <script src="src/index.js" charset="utf-8"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px; /* إضافة padding لجميع عناصر الـ body */
+      box-sizing: border-box;
+    }
+
+    #dog-image-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 20px; /* مسافة سطر بين الصور والقائمة */
+    }
+
+    #dog-image-container img {
+      width: 200px;
+      height: 150px;
+      object-fit: contain; /* يحافظ على أبعاد الصورة دون تشويه */
+      border-radius: 10px;
+      border: 2px solid #ddd;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    #dog-breeds {
+      display: flex;
+      flex-wrap: wrap;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      gap: 10px; /* مسافة بين العناصر */
+      justify-content: center;
+    }
+
+    #dog-breeds li {
+      padding: 10px;
+      background-color: #f0f0f0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      text-align: center; /* توسيط النص */
+      min-width: 100px; /* عرض ثابت للعناصر */
+    }
+
+    #dog-breeds li:hover {
+      background-color: #ddd;
+    }
+
+    /* إضافة مسافة بين القائمة المنسدلة وسلالات الكلاب */
+    label, #breed-dropdown {
+      margin-bottom: 10px; /* المسافة بين القائمة وسلالات الكلاب */
+      display: block; /* جعل القائمة المنسدلة تظهر على سطر منفصل */
+    }
+  </style>
+</head>
+<body>
+  <h1>Dog CEO</h1>
+
+  <div id="dog-image-container">
+    <!-- images here -->
+  </div>
+
+  <hr>
+  <label for="select-breed">Filter Breeds That Start with:</label>
+  <select id="breed-dropdown" name="select-breed">
+    <option value="">ALL</option>
+    <option value="a">a</option>
+    <option value="b">b</option>
+    <option value="c">c</option>
+    <option value="d">d</option>
+  </select>
+
+  <ul id="dog-breeds">
+    <!-- dog breeds here -->
+  </ul>
+</body>
+</html>
